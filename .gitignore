@@ -1,3 +1,17 @@
+# Eclipse IDE
+.classpath
+.project
+.settings/
+
+# build folders
+bin/
+target/
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist
+
 # Compiled class file
 *.class
 
