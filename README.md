@@ -72,31 +72,10 @@ public void start(Stage primaryStage) {
 - Customize menu items
 - Update Main.java
 
-```xml
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-	prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1"
-	xmlns:fx="http://javafx.com/fxml/1">
-	<content>
-		<VBox prefHeight="326.0" prefWidth="513.0">
-			<children>
-				<MenuBar>
-					<menus>
-						<Menu mnemonicParsing="false" text="Registration">
-							<items>
-								<MenuItem mnemonicParsing="false" text="Seller" />
-								<MenuItem mnemonicParsing="false" text="Departments" />
-							</items>
-						</Menu>
-						<Menu mnemonicParsing="false" text="Help">
-							<items>
-								<MenuItem mnemonicParsing="false" text="About" />
-							</items>
-						</Menu>
-					</menus>
-				</MenuBar>
-			</children>
-		</VBox>
-	</content>
-</ScrollPane>
-```
+![image](https://user-images.githubusercontent.com/56324728/90935228-29fbd600-e3d9-11ea-9cd8-86189ea9b8ed.png)
+
+## Main view controller
+
+**Checklist:**
+- Create controller
+- In view, associate controller, ids, events
