@@ -1,7 +1,4 @@
-# workshop-javafx-jdbc
-
-
-# Curso: Java COMPLETO - Programação Orientada a Objetos + Projetos
+# [Curso: Java COMPLETO - Programação Orientada a Objetos + Projetos](https://www.udemy.com/course/java-curso-completo/)
 
 ## Seção 23:Projeto: Aplicação desktop com JavaFX e banco de dados MySQL com JDBC
 
@@ -16,7 +13,7 @@ depois prosseguir estudando, de forma confortável, as especificidades que desej
 
 **REQUISITOS:** OO & Lambda & JDBC & JavaFX
 
-**PROJETO:** https://github.com/acenelio/workshop-javafx-jdbc
+**PROJETO DO PROFESSOR:** https://github.com/acenelio/workshop-javafx-jdbc
 
 ## Github project
 
@@ -31,7 +28,7 @@ depois prosseguir estudando, de forma confortável, as especificidades que desej
 `--module-path E:\java-libs\javafx-sdk-11.0.2\lib --add-modules=javafx.fxml,javafx.controls`
 - Git:
   - git init
-  - git remote add origin https://github.com/acenelio/workshop-javafx-jdbc.git
+  - git remote add origin https://github.com/Edufreitass/workshop-javafx-jdbc.git
   - git pull origin master
 - Gitignore:
     
@@ -43,3 +40,27 @@ depois prosseguir estudando, de forma confortável, as especificidades que desej
       nbbuild/
       dist/
       nbdist/
+
+## Main view
+
+**Checklist:**
+- Create FXML "MainView" (package "gui")
+- Load FXML in Main
+- Update Main.java
+
+```java
+@Override
+public void start(Stage primaryStage) {
+    try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
+        Parent parent = loader.load();
+        
+        Scene mainScene = new Scene(parent);
+        primaryStage.setScene(mainScene);
+        primaryStage.setTitle("Sample JavaFX application");
+        primaryStage.show();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+```
