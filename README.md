@@ -98,3 +98,10 @@ https://github.com/acenelio/javafx5/blob/master/src/gui/util/Constraints.java
 
 ![image](https://user-images.githubusercontent.com/56324728/90960280-f53e5c00-e476-11ea-94aa-af84f2e93222.png)
 
+## DepartmentList controller
+
+**Checklist:**
+- Create model.entities.Department.java
+https://github.com/acenelio/demo-dao-jdbc/blob/master/src/model/entities/Department.java
+- Create DepartmentListController.java
+- In view, associate controller, ids, events
