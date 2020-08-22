@@ -89,3 +89,12 @@ https://github.com/acenelio/javafx5/blob/master/src/gui/util/Constraints.java
 - Create About.fxml (VBox)
 - In Main.java, expose mainScene reference
 - In MainViewController.java, create loadView method
+
+## DepartmentList view design
+
+**Checklist:**
+- Create DepartmentList.fxml (VBox)
+- In MainViewController.java, load DepartmentList
+
+![image](https://user-images.githubusercontent.com/56324728/90960280-f53e5c00-e476-11ea-94aa-af84f2e93222.png)
+
