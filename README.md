@@ -105,3 +105,12 @@ https://github.com/acenelio/javafx5/blob/master/src/gui/util/Constraints.java
 https://github.com/acenelio/demo-dao-jdbc/blob/master/src/model/entities/Department.java
 - Create DepartmentListController.java
 - In view, associate controller, ids, events
+
+## DepartmentService
+
+**Checklist:**
+- Create model.services.DepartmentService.java with findAll method
+- In DepartmentListController:
+  - Create DepartmentService dependency with set method
+  - Create ObservableList<Department>
+  - Create updateTableViewData method
