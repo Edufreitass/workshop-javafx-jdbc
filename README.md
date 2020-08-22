@@ -79,3 +79,13 @@ public void start(Stage primaryStage) {
 **Checklist:**
 - Create controller
 - In view, associate controller, ids, events
+
+## About view
+
+**Checklist:**
+- Include util classes to the project (Alerts.java, Constraints.java)
+https://github.com/acenelio/javafx5/blob/master/src/gui/util/Alerts.java
+https://github.com/acenelio/javafx5/blob/master/src/gui/util/Constraints.java
+- Create About.fxml (VBox)
+- In Main.java, expose mainScene reference
+- In MainViewController.java, create loadView method
