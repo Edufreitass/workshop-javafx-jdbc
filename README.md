@@ -160,4 +160,12 @@ https://github.com/acenelio/demo-dao-jdbc
 - Create DepartmentFormController.java
 - In view, associate controller, ids, events
 
+## Passing a Department object to DepartmentForm view
 
+**Checklist:**
+- In DepartmentFormController
+  - Create a Department dependency with set method
+  - Create updateFormData method
+- In DepartmentListController
+  - Update onBtNewAction method
+  - Update createDialogForm method
