@@ -169,3 +169,14 @@ https://github.com/acenelio/demo-dao-jdbc
 - In DepartmentListController
   - Update onBtNewAction method
   - Update createDialogForm method
+
+## Saving a new Department
+
+**Checklist:**
+- In Utils, implement tryParseToInt method
+- In DepartmentService, create saveOrUpdate method
+- In DepartmentFormController
+  - Create a DepartmentService dependency with set method
+  - Implement onBtSaveAction
+  - Implement onBtCancelAction
+- In DepartmentListController, inject DepartmentService instance
