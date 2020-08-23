@@ -191,3 +191,14 @@ https://github.com/acenelio/demo-dao-jdbc
 - In DepartmentListController (observer)
   - Implement DataChangeListener interface
   - Subscribe for DepartmentFormController
+
+## Validation exception
+
+**Checklist:**
+- Create model.exceptions.ValidationException
+- In DepartmentFormController
+  - In getFormData method, implement verifications and throw ValidationException
+  - Implement setErrorMessages method
+  - In onBtSaveAction, catch ValidationException
+
+
