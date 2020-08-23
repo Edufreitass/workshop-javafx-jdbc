@@ -237,4 +237,51 @@ private void initEditButtons() {
 }
 ```
 
+## Remove department
+
+**References:**
+https://stackoverflow.com/questions/32282230/fxml-javafx-8-tableview-make-a-delete-button-in-each-row-anddelete-
+the-row-a
+
+**Checklist:**
+- In Alerts, create showConfirmation method
+- In DepartmentService, create remove method
+- In DepartmentListController
+  - Create new attribute: TableColumn<Department, Department> tableColumnREMOVE;
+  - Create initRemoveButtons method
+    - Catch DbIntegrityException
+   - In updateTableViewData, call initRemoveButtons
+- In DepartmentList.fxml
+  - Include new table column
+  - Associate id
+
+```java
+public static Optional<ButtonType> showConfirmation(String title, String content) {
+  Alert alert = new Alert(AlertType.CONFIRMATION);
+  alert.setTitle(title);
+  alert.setHeaderText(null);
+  alert.setContentText(content);
+  return alert.showAndWait();
+}
+
+private void initRemoveButtons() {
+  tableColumnREMOVE.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
+  tableColumnREMOVE.setCellFactory(param -> new TableCell<Department, Department>() {
+  private final Button button = new Button("remove");
+
+  @Override
+  protected void updateItem(Department obj, boolean empty) {
+    super.updateItem(obj, empty);
+    if (obj == null) {
+      setGraphic(null);
+      return;
+    }
+    setGraphic(button);
+    button.setOnAction(event -> removeEntity(obj));
+    }
+  });
+}
+```
+
+
 
