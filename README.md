@@ -356,3 +356,13 @@ public static <T> void formatTableColumnDouble(TableColumn<T, Double> tableColum
   });
 }
 ```
+
+## SellerForm
+
+**Checklist:**
+- Clone SellerFormController
+  - Replace: Department -> Seller
+- Clone SellerForm view
+  - Replace: Department -> Seller
+- SellerListController
+  - Uncomment createDialogForm
