@@ -366,3 +366,19 @@ public static <T> void formatTableColumnDouble(TableColumn<T, Double> tableColum
   - Replace: Department -> Seller
 - SellerListController
   - Uncomment createDialogForm
+
+## TextField & DatePicker
+
+**References:**
+https://stackoverflow.com/questions/26831978/javafx-datepicker-getvalue-in-a-specific-format
+
+**Checklist:**
+- gui.utils.Util.java
+  - formatDatePicker method
+- TextField & DatePicker attributes (Email, BirthDate, BaseSalary)
+- Label error attributes (Email, BirthDate, BaseSalary)
+- Edit SellerFormView
+- Bugfix: SellerDaoJDBC.instantiateSeller
+      `obj.setBirthDate(new java.util.Date(rs.getTimestamp("BirthDate").getTime()));`
+- Update: initializeNodes
+- Update: updateFormData
