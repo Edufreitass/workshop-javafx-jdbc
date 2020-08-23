@@ -121,3 +121,21 @@ https://github.com/acenelio/demo-dao-jdbc/blob/master/src/model/entities/Departm
 - Add a Consumer<T> parameter to loadView method
 - After loading view, call accept from the Consumer
 - Add a consumer instance on loadView calls
+
+## Adding database access
+
+**Prerequisites:**
+- MySQL server installed and running
+- Database created and instantiated
+https://github.com/acenelio/demo-dao-jdbc/blob/master/database.sql
+- Data access layer implemented (DAO pattern):
+https://github.com/acenelio/demo-dao-jdbc
+
+**Checklist:**
+- Add model.entities.Seller.java
+- Add db.properties do project
+- Add data access packages to project:
+  - db
+  - model.dao
+  - model.dao.impl
+- In DepartmentService, add DepartmentDao dependency with Factory call
