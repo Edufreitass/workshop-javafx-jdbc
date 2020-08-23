@@ -288,3 +288,15 @@ private void initRemoveButtons() {
 **Checklist:**
 - **.gitignore**: .settings/
 - Delete .settings/ folder
+
+## SellerList
+
+**Checklist:**
+- Clone SellerService
+  - Replace: Department -> Seller
+- Clone SellerListController
+  - Replace: Department -> Seller
+  - Comment createDialogForm
+- Clone SellerList.fxml
+  - Replace: Department -> Seller
+- Update MainViewController.onMenuItemSellerAction
