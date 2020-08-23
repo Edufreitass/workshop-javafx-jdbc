@@ -283,5 +283,8 @@ private void initRemoveButtons() {
 }
 ```
 
+## Deleting .settings folder
 
-
+**Checklist:**
+- **.gitignore**: .settings/
+- Delete .settings/ folder
