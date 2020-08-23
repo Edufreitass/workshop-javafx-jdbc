@@ -114,3 +114,10 @@ https://github.com/acenelio/demo-dao-jdbc/blob/master/src/model/entities/Departm
   - Create DepartmentService dependency with set method
   - Create ObservableList<Department>
   - Create updateTableViewData method
+
+## Initializing action as parameter
+
+**Checklist:**
+- Add a Consumer<T> parameter to loadView method
+- After loading view, call accept from the Consumer
+- Add a consumer instance on loadView calls
