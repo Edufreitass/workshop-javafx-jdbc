@@ -180,3 +180,14 @@ https://github.com/acenelio/demo-dao-jdbc
   - Implement onBtSaveAction
   - Implement onBtCancelAction
 - In DepartmentListController, inject DepartmentService instance
+
+## Observer design pattern to update tableview
+
+**Checklist:**
+- Create interface gui.listeners.DataChangeListener
+- In DepartmentFormController (subject)
+  - Create List<DataChangeListener> dependency with subscribe method
+  - Notify subscribers when needed
+- In DepartmentListController (observer)
+  - Implement DataChangeListener interface
+  - Subscribe for DepartmentFormController
