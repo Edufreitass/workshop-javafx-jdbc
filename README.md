@@ -139,3 +139,20 @@ https://github.com/acenelio/demo-dao-jdbc
   - model.dao
   - model.dao.impl
 - In DepartmentService, add DepartmentDao dependency with Factory call
+
+## DepartmentForm (dialog) design
+
+**Checklist:**
+- Create gui.util.Utils.java with currentStage method
+- Create DepartmentForm.fxml (AnchorPane)
+  - GridPane 3x3 (anchors: 20 top, 20 left)
+  - Id text box: not editable
+  - Label error: **red**
+  - HBox (spacing: 5)
+- In DepartmentListController, create createDialogForm method
+- Call createDialogForm on "new" button action
+
+![image](https://user-images.githubusercontent.com/56324728/90980527-45c6bf80-e532-11ea-8a1a-f9f3fe387552.png)
+
+
+
