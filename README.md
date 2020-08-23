@@ -300,3 +300,59 @@ private void initRemoveButtons() {
 - Clone SellerList.fxml
   - Replace: Department -> Seller
 - Update MainViewController.onMenuItemSellerAction
+
+## Seller TableView
+
+**References:**
+https://stackoverflow.com/questions/47484280/format-of-date-in-the-javafx-tableview
+
+**Checklist:**
+- gui.utils.Util.java
+  - formatTableColumnDate method
+  - formatTableColumnDouble method
+- SellerListController
+  - TableColumn attributes (Email, BirthDate, BaseSalary)
+  - Update initializeNodes
+- SellerListView
+  - TableColumn (Email, BirthDate, BaseSalary)
+  - Associate fx:id
+
+```java
+public static <T> void formatTableColumnDate(TableColumn<T, Date> tableColumn, String format) {
+  tableColumn.setCellFactory(column -> {
+    TableCell<T, Date> cell = new TableCell<T, Date>() {
+      private SimpleDateFormat sdf = new SimpleDateFormat(format);
+      
+      @Override
+      protected void updateItem(Date item, boolean empty) {
+          super.updateItem(item, empty);
+          if (empty) {
+            setText(null);
+          } else {
+            setText(sdf.format(item));
+          }
+       }
+     };
+      return cell;
+  });
+}
+
+public static <T> void formatTableColumnDouble(TableColumn<T, Double> tableColumn, int decimalPlaces) {
+  tableColumn.setCellFactory(column -> {
+    TableCell<T, Double> cell = new TableCell<T, Double>() {
+    
+    @Override
+    protected void updateItem(Double item, boolean empty) {
+      super.updateItem(item, empty);
+      if (empty) {
+        setText(null);
+      } else {
+        Locale.setDefault(Locale.US);
+        setText(String.format("%."+decimalPlaces+"f", item));
+      }
+    }
+   };
+      return cell;
+  });
+}
+```
