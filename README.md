@@ -440,3 +440,9 @@ private void initializeComboBoxDepartment() {
     comboBoxDepartment.setButtonCell(factory.call(null));
 }
 ```
+
+## Saving Seller
+
+**Checklist:**
+- Update: getFormData
+- Update: setErrorMessages
