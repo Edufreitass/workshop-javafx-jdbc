@@ -409,3 +409,34 @@ public static void formatDatePicker(DatePicker datePicker, String format) {
     });
 }
 ```
+
+## Department ComboBox
+
+**Checklist:**
+
+- Update controller:
+  - DepartmentService dependency
+    - attribute
+    - set method
+  - ComboBox<Department> comboBoxDepartment
+  - ObservableList<Department> obsList
+    - loadAssociatedObjects
+  - initializeComboBoxDepartment
+  - updateFormData
+- Update view:
+  - ComboBox
+  - fx:id
+
+```java
+private void initializeComboBoxDepartment() {
+    Callback<ListView<Department>, ListCell<Department>> factory = lv -> new ListCell<Department>() {
+        @Override
+        protected void updateItem(Department item, boolean empty) {
+            super.updateItem(item, empty);
+            setText(empty ? "" : item.getName());
+        }
+    };
+    comboBoxDepartment.setCellFactory(factory);
+    comboBoxDepartment.setButtonCell(factory.call(null));
+}
+```
